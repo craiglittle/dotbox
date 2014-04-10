@@ -4,6 +4,11 @@ GITHUBTARBALL
     boxen (3.4.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.2.0)
@@ -90,6 +95,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   boxen (= 3.4.2)
+  chrome (= 1.1.2)
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   git (= 2.3.0)

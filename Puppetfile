@@ -32,6 +32,7 @@ github 'module-data', '0.0.3', :repo => 'ripienaar/puppet-module-data'
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
+github 'chrome',      '1.1.2'
 github 'foreman',     '1.2.0'
 github 'gcc',         '2.0.100'
 github 'git',         '2.3.0'
