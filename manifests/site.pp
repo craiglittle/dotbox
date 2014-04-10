@@ -2,6 +2,8 @@ require boxen::environment
 require homebrew
 require gcc
 
+$home = "/Users/${boxen_user}"
+
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
@@ -74,8 +76,11 @@ node default {
     ]:
   }
 
+  include dotfiles
+
   file { "${boxen::config::srcdir}/dotbox":
     ensure => link,
     target => $boxen::config::repodir
   }
+
 }
