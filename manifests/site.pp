@@ -84,4 +84,10 @@ node default {
     target => $boxen::config::repodir
   }
 
+  file { "remove 'last login' message from terminal":
+    path    => "${home}/.hushlogin",
+    content => '',
+    ensure  => present
+  }
+
 }
