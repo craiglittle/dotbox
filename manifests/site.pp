@@ -57,6 +57,7 @@ node default {
   include nginx
 
   include chrome
+  include zsh
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
