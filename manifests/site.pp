@@ -57,6 +57,7 @@ node default {
   include nginx
 
   include chrome
+  include iterm2::stable
   include zsh
 
   # fail if FDE is not enabled
