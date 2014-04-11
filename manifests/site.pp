@@ -58,6 +58,7 @@ node default {
 
   include chrome
   include iterm2::stable
+  include vagrant
   include zsh
 
   # fail if FDE is not enabled
