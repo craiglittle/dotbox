@@ -80,6 +80,7 @@ node default {
   }
 
   include dotfiles
+  include mac
 
   file { "${boxen::config::srcdir}/dotbox":
     ensure => link,
