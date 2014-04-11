@@ -33,6 +33,7 @@ github 'module-data', '0.0.3', :repo => 'ripienaar/puppet-module-data'
 # some/most of these if you want, but it's not recommended.
 
 github 'chrome',      '1.1.2'
+github 'flowdock',    '1.0.0'
 github 'foreman',     '1.2.0'
 github 'gcc',         '2.0.100'
 github 'git',         '2.3.0'

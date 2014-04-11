@@ -57,6 +57,7 @@ node default {
   include nginx
 
   include chrome
+  include flowdock
   include iterm2::stable
   include vagrant
   include zsh
