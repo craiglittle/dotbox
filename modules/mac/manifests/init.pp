@@ -44,4 +44,53 @@ class mac {
     size => 20
   }
 
+  boxen::osx_defaults { 'disable menu bar transparency':
+    domain => 'NSGlobalDomain',
+    key    => 'AppleEnableMenuBarTransparency',
+    type   => boolean,
+    value  => false,
+    user   => $boxen_user
+  }
+
+  boxen::osx_defaults { 'disable opening and closing window animations':
+    domain => 'NSGlobalDomain',
+    key    => 'NSAutomaticWindowAnimationsEnabled',
+    type   => boolean,
+    value  => false,
+    user   => $boxen_user
+  }
+
+  boxen::osx_defaults { 'save to disk (not iCloud) by default':
+    domain => 'NSGlobalDomain',
+    key    => 'NSDocumentSaveNewDocumentsToCloud',
+    type   => boolean,
+    value  => false,
+    user   => $boxen_user
+  }
+
+  boxen::osx_defaults { 'format menu bar clock':
+    domain => 'com.apple.menuextra.clock',
+    key    => 'DateFormat',
+    type   => string,
+    value  => 'MMM d H:mm',
+    user   => $boxen_user
+  }
+
+  boxen::osx_defaults { 'show battery percentage':
+    domain => 'com.apple.menuextra.battery',
+    key    => 'ShowPercent',
+    type   => boolean,
+    value  => true,
+    user   => $boxen_user
+  }
+
+  exec { 'turn off notification center':
+    command => '/bin/launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist'
+  }
+
+  file { "${home}/Downloads/About Downloads.lpdf":
+    ensure => absent,
+    force  => true
+  }
+
 }
