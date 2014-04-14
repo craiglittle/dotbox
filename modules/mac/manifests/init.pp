@@ -24,14 +24,6 @@ class mac {
   include osx::no_network_dsstores
   include osx::software_update
 
-  class { 'osx::global::key_repeat_delay':
-    delay => 10
-  }
-
-  class { 'osx::global::key_repeat_rate':
-    rate => 2
-  }
-
   class { 'osx::global::natural_mouse_scrolling':
     enabled => false
   }
