@@ -16,7 +16,6 @@ class mac {
   include osx::finder::show_removable_media_on_desktop
   include osx::finder::empty_trash_securely
   include osx::finder::unhide_library
-  include osx::finder::show_hidden_files
 
   include osx::keyboard::capslock_to_control
 
