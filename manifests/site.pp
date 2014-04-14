@@ -60,6 +60,7 @@ node default {
   include flowdock
   include iterm2::stable
   include vagrant
+  include virtualbox
   include zsh
 
   # fail if FDE is not enabled
