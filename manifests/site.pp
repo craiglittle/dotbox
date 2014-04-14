@@ -59,9 +59,12 @@ node default {
   include chrome
   include flowdock
   include iterm2::stable
-  include vagrant
   include virtualbox
   include zsh
+
+  class { 'vagrant':
+    version => '1.5.3'
+  }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
