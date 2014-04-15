@@ -67,14 +67,6 @@ class mac {
     user   => $boxen_user
   }
 
-  boxen::osx_defaults { 'show battery percentage':
-    domain => 'com.apple.menuextra.battery',
-    key    => 'ShowPercent',
-    type   => boolean,
-    value  => true,
-    user   => $boxen_user
-  }
-
   exec { 'turn off notification center':
     command => '/bin/launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist'
   }
