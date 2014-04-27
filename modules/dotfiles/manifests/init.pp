@@ -1,6 +1,6 @@
 class dotfiles {
 
-  $dir = "/Users/clittle/.dotfiles"
+  $dir = "/Users/${boxen_user}/.dotfiles"
 
   repository { 'dotfiles':
     path     => $dotfiles::dir,
@@ -9,7 +9,7 @@ class dotfiles {
   }
 
   repository { 'vundle':
-    path     => "/Users/clittle/.vim/bundle/vundle",
+    path     => "/Users/${boxen_user}/.vim/bundle/vundle",
     source   => 'gmarik/vundle',
     provider => git,
     require  => Dotfile['vim']
@@ -20,7 +20,7 @@ class dotfiles {
     require => Repository['vundle']
   }
 
-  file { "/Users/clittle/bin":
+  file { "/Users/${boxen_user}/bin":
     ensure  => link,
     target  => "${dotfiles::dir}/bin",
     require => Repository['dotfiles']
